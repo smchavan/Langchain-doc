@@ -42,6 +42,16 @@ documents = text_splitter.split_documents(documents)
 print(len(documents))
 print(documents[7])
 
+embeddings = OpenAIEmbeddings()
+
+vectorstore = Chroma.from_documents(documents, embeddings)
+
+
+
+
+
+
+
 # # Load the Word documents
 # doc1_path = "/Users/supriya/AI/test-langchain/Data/Test-Data1.docx"
 # doc2_path = "/Users/supriya/AI/test-langchain/Data/Test-Data2.docx"
